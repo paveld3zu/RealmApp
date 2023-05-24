@@ -126,6 +126,7 @@ extension TaskListViewController {
                 if let taskList, let completion {
                     self?.storageManager.edit(taskList, newValue: newValue)
                     completion()
+                    return
                 }
                 self?.save(taskList: newValue)
             }

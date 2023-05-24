@@ -127,6 +127,7 @@ extension TasksViewController {
                 if let task, let completion {
                     StorageManager.shared.edit(task, newValue: taskTitle, newNote: taskNote)
                     completion()
+                    return
                 }
                 self?.save(task: taskTitle, withNote: taskNote)
             }
