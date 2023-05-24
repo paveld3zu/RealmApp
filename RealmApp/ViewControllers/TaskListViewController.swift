@@ -78,8 +78,6 @@ final class TaskListViewController: UITableViewController {
         return UISwipeActionsConfiguration(actions: [doneAction, editAction, deleteAction])
     }
     
-
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
@@ -88,7 +86,7 @@ final class TaskListViewController: UITableViewController {
         tasksVC.taskList = taskList
     }
     
-    @IBAction func sortingList(_ sender: UISegmentedControl) {
+    @IBAction func sorted(_ sender: UISegmentedControl) {
         let sort = sender.selectedSegmentIndex == 0 ? "date" : "title"
         taskLists = taskLists.sorted(byKeyPath: sort, ascending: true)
         tableView.reloadData()

@@ -108,7 +108,6 @@ final class TasksViewController: UITableViewController {
     @objc private func addButtonPressed() {
         showAlert()
     }
-
 }
 
 // MARK: - AlertController
